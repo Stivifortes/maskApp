@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/styles.css" />
+    <title>Mask Detector</title>
+  </head>
+  <body id="test">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark" id="myHeader">
+      <div>
+        <img
+          src="../static/images/um.png"
+          alt="UMindelo"
+          width="150px"
+          height="50px"
+        />
+      </div>
+      <div id="divText">
+        <p id="headerText">Face Mask Detector - Stiven Fortes</p>
+      </div>
+    </nav>
+    <div class="container">
+      <div id="home">
+        <h1>Covid19 Face Mask Detector</h1>
+        <p style="width: 80%">
+          SARS-CoV-2, better known as coronavirus, has already reached almost
+          every country in the whole world, starting a pandemic after more than
+          a century. The virus spreads by water droplets, which circulate
+          through the air. As a measure to mitigate its spreading, the WHO
+          (World Health Organization) decreed the mandatory use of face masks.
+          The control of this Security measure has been done by security
+          officers and police. Thus, a control tool of this measure in an
+          automated way becomes indispensable.
+        </p>
+      </div>
+      <div class="navbar-brand"></div>
+      <div>
+        <h1>Please Wear a Mask</h1>
+        <img
+          src="{{ url_for('display_image', filename=output_img_path) }}"
+          alt=""
+          height="300px"
+          width="500px"
+          class="imagem"
+        />
+        <form action="/" method="post" enctype="multipart/form-data">
+          <input
+            type="file"
+            name="imagefile"
+            required
+            class="btn btn-outline-secondary my-2 my-sm-0"
+          />
+          <input type="submit" value="Predict Image" class="btn btn-success" />
+        </form>
+        <div id="banner">
+          <img
+            src="../static/images/advices.png"
+            width="300px"
+            height="500px"
+          />
+        </div>
+      </div>
+      {% if prediction %}
+      <p>Person is a {{prediction}}</p>
+      {% endif %}
+    </div>
+  </body>
+</html>

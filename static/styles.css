@@ -1,0 +1,37 @@
+#test {
+  background-color: #ddd;
+}
+
+#myHeader {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#divText {
+  display: flex;
+  align-items: center;
+}
+#headerText {
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+}
+#banner {
+  position: fixed;
+  top: 180px;
+  right: 300px;
+}
+#home {
+  padding-top: 100px;
+}
+
+.video {
+  margin-top: 30px;
+  width: 70%;
+  height: 500px;
+  background-color: sandybrown;
+}
+.imagem {
+  margin: 20px;
+  border: 1px solid #000;
+}

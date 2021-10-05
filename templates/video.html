@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/styles.css" />
+    <title>Mask Detector</title>
+  </head>
+  <body id="test">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark" id="myHeader">
+      <div>
+        <img
+          src="../static/images/um.png"
+          alt="UMindelo"
+          width="150px"
+          height="50px"
+        />
+      </div>
+      <div id="divText">
+        <p id="headerText">Face Mask Detector - Stiven Fortes</p>
+      </div>
+    </nav>
+    <div class="container">
+      <div id="home">
+        <h1>Live Mask Predictions</h1>
+        <div class="video"></div>
+      </div>
+      <div class="navbar-brand"></div>
+      <div>
+        <div id="banner">
+          <img
+            src="../static/images/advices.png"
+            width="300px"
+            height="500px"
+          />
+        </div>
+      </div>
+      {% if prediction %}
+      <p>Person is a {{prediction}}</p>
+      {% endif %}
+    </div>
+  </body>
+</html>
